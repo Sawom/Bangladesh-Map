@@ -17,7 +17,7 @@ const BangladeshMap = (props) => {
   };
 
   return (
-    <div className=" container mx-auto flex items-center justify-center min-h-screen  overflow-hidden">
+    <div className="container mx-auto flex items-center justify-center min-h-screen  overflow-hidden">
       {/* 3. svg map */}
       <svg
         onClick={handleMapClick}
