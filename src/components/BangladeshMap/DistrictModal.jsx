@@ -6,6 +6,7 @@ const DistrictModal = ({ data, onClose }) => {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
       <div className="bg-white rounded-xl shadow-2xl max-w-lg w-full overflow-hidden animate-in zoom-in duration-200">
+        {/* modal header */}
         <div className="bg-teal-600 p-4 text-white flex justify-between items-center">
           <h2 className="text-xl font-bold">{data.name} জেলা</h2>
           {/* close button */}
