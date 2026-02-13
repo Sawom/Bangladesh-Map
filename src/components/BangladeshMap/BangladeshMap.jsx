@@ -1,10 +1,12 @@
 const BangladeshMap = () => (
-  <div>
+  <div className="flex items-center justify-center min-h-screen bg-gray-50 p-4 overflow-hidden">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       id="svg1895"
-      width="1530.748"
-      height="2138"
+      viewBox="0 0 1530.748 2138" // Eti must thakte hobe map na katar jonno
+      className="w-full h-full" // Tailwind class ekhon kaj korbe
+      style={{ maxWidth: "100%", maxHeight: "100%" }} // Atirikto nishpotti
+      preserveAspectRatio="xMidYMid meet"
       version="1"
     >
       <g id="layer1" fillOpacity="1">
