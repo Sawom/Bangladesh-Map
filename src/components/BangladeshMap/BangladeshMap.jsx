@@ -1,6 +1,8 @@
 "use client";
+
 import { districtsData } from "@/data/data";
 import { useState } from "react";
+import DistrictModal from "./DistrictModal";
 
 const BangladeshMap = (props) => {
   // 1. selected data
@@ -8,10 +10,9 @@ const BangladeshMap = (props) => {
 
   // 2. click function
   const handleMapClick = (e) => {
-    const districtId = e.target.id;
-
-    if (districtsData[districtId]) {
-      setSelectedDistrict(districtsData[districtId]);
+    const id = e.target.id;
+    if (districtsData[id]) {
+      setSelectedDistrict(districtsData[id]);
     }
   };
 
@@ -2414,86 +2415,11 @@ const BangladeshMap = (props) => {
         </g>
       </svg>
 
-      {/* 4. modal */}
-      {selectedDistrict && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
-          <div className="bg-white rounded-xl shadow-2xl max-w-lg w-full overflow-hidden animate-in zoom-in duration-200">
-            
-            <div className="bg-teal-600 p-4 text-white flex justify-between items-center">
-              <h2 className="text-xl font-bold">
-                {selectedDistrict.name} জেলা
-              </h2>
-              <button
-                onClick={() => setSelectedDistrict(null)}
-                className="text-2xl font-bold leading-none hover:text-gray-200"
-              >
-                &times;
-              </button>
-            </div>
-
-            {/* content body */}
-            <div className="p-6 max-h-[70vh] overflow-y-auto space-y-4">
-              <p className="text-gray-700 italic border-l-4 border-teal-500 pl-3">
-                {selectedDistrict.info}
-              </p>
-
-              <div className="grid grid-cols-2 gap-4 text-sm bg-gray-50 p-3 rounded-lg">
-                <p>
-                  <strong>বিভাগ:</strong> {selectedDistrict.division}
-                </p>
-                <p>
-                  <strong>স্থাপিত:</strong> {selectedDistrict.established}
-                </p>
-                <p>
-                  <strong>আয়তন:</strong> {selectedDistrict.area}
-                </p>
-                <p>
-                  <strong>বিখ্যাত:</strong> {selectedDistrict.famous_for}
-                </p>
-              </div>
-
-              <div>
-                <h3 className="font-bold text-teal-700 mb-1">
-                  উপজেলা ({selectedDistrict.upazilas.count}টি):
-                </h3>
-                <p className="text-sm text-gray-600">
-                  {selectedDistrict.upazilas.list.join(", ")}
-                </p>
-              </div>
-
-              <div>
-                <h3 className="font-bold text-teal-700 mb-1">
-                  দর্শনীয় স্থান:
-                </h3>
-                <ul className="list-disc list-inside text-sm text-gray-600">
-                  {selectedDistrict.tourist_spots.map((spot, i) => (
-                    <li key={i}>{spot}</li>
-                  ))}
-                </ul>
-              </div>
-
-              <div>
-                <h3 className="font-bold text-teal-700 mb-1">
-                  বিখ্যাত ব্যক্তিত্ব:
-                </h3>
-                <p className="text-sm text-gray-600">
-                  {selectedDistrict.notable_people.join(", ")}
-                </p>
-              </div>
-            </div>
-
-            
-            <div className="p-4 border-t bg-gray-50 text-right">
-              <button
-                onClick={() => setSelectedDistrict(null)}
-                className="bg-teal-600 text-white px-6 py-2 rounded-lg hover:bg-teal-700 transition"
-              >
-                close
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
+      {/* 4. modal component */}
+      <DistrictModal
+        data={selectedDistrict}
+        onClose={() => setSelectedDistrict(null)}
+      />
     </div>
   );
 };
