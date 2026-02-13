@@ -8,7 +8,7 @@ export const districtsData = {
   },
   nilphamari: { 
     name: "nilphamari", 
-    x: 750, 
+    x: "", 
     y: 1050, 
     info: "" 
   },
