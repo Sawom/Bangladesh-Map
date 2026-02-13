@@ -42,7 +42,7 @@ export const districtsData = {
     notable_people: ["বেগম রোকেয়া (কর্মভূমি)", "একেএম শামসুজ্জোহা"], 
     info: "একে প্রাচ্যের ডান্ডি বলা হয়।"
   },
-  narsingdi: {
+  narshingdi: {
     name: "নরসিংদী", division: "Dhaka", established: "১৯৮৪", area: "১১৪১.০০ কিমি²",
     famous_for: "লটকন, তাঁত শিল্প",
     upazilas: { count: 6, list: ["নরসিংদী সদর", "বেলাবো", "মনোহরদী", "পলাশ", "রায়পুরা", "শিবপুর"] },
@@ -403,7 +403,7 @@ export const districtsData = {
     notable_people: ["এম এ জি ওসমানী"], 
     info: "৩৬০ আউলিয়ার পুণ্যভূমি।"
   },
-  moulvibazar: {
+  moulovibazar: {
     name: "মৌলভীবাজার", division: "Sylhet", established: "১৯৮৪", area: "২৭৯৯.৩৯ কিমি²",
     famous_for: "চা শিল্প",
     upazilas: { count: 7, list: ["মৌলভীবাজার সদর", "শ্রীমঙ্গল", "কুলাউড়া", "রাজনগর", "কমলগঞ্জ", "জুড়ী", "বড়লেখা"] },
