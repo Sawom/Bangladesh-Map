@@ -2413,6 +2413,13 @@ const BangladeshMap = (props) => {
             </tspan>
           </text>
         </g>
+        <style>
+     {`
+      text {
+        pointer-events: none;
+      }
+    `}
+        </style>
       </svg>
 
       {/* 4. modal component */}
