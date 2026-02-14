@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -13,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: "Bangladesh Map",
-  description: "",
+  description: "explore Bangladesh",
 };
 
 export default function RootLayout({ children }) {
@@ -24,6 +25,7 @@ export default function RootLayout({ children }) {
         suppressHydrationWarning
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );
